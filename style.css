@@ -357,40 +357,31 @@ h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
   margin-bottom: 2.5rem;
 }
 
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
-}
-
-.gallery-placeholder {
-  aspect-ratio: 4 / 3;
-  background: repeating-linear-gradient(45deg, #E4E9E7, #E4E9E7 10px, #EDF1EF 10px, #EDF1EF 20px);
-  border-radius: var(--radius);
+/* Launch callout (Gallery / Reviews — honest "just starting" framing) */
+.launch-callout {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-  font-weight: 600;
-  border: 1px dashed rgba(22, 35, 61, 0.2);
-}
-
-/* Reviews */
-.reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.review-placeholder {
+  justify-content: space-between;
+  gap: 2rem;
   background: #fff;
-  border: 1px dashed rgba(22, 35, 61, 0.2);
+  border: 1px solid rgba(33, 168, 151, 0.25);
   border-radius: var(--radius);
-  padding: 2.5rem 1.5rem;
-  text-align: center;
+  padding: 2.25rem 2.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.launch-callout h3 {
+  margin-bottom: 0.5rem;
+}
+
+.launch-callout p {
   color: var(--text-muted);
-  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.launch-callout .btn {
+  flex-shrink: 0;
 }
 
 /* Pricing */
@@ -595,14 +586,17 @@ h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
   .services-grid,
   .why-grid,
   .stats-grid,
-  .gallery-grid,
-  .reviews-grid,
   .pricing-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-inner {
     grid-template-columns: 1fr;
+  }
+
+  .launch-callout {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -611,12 +605,14 @@ h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 0.5rem; }
   .services-grid,
   .why-grid,
   .stats-grid,
-  .gallery-grid,
-  .reviews-grid,
   .pricing-grid {
     grid-template-columns: 1fr;
   }
 
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { text-align: center; }
+
+  .launch-callout {
+    padding: 1.75rem;
+  }
 }
